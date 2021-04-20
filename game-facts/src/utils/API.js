@@ -5,7 +5,7 @@ import hiddenKey from './hiddenKey';
 export default {
     getDailySchedule: function() {
         console.log(hiddenKey.key);
-        return axios.get('https://api.the-odds-api.com/v3/odds/?apiKey=' + "f75f404098484a5b2dbde547878fca0a" + '&sport=basketball&region=us&mkt=spreads')
+        return axios.get('https://api.the-odds-api.com/v3/odds/?apiKey=' + "e6d3bf2e29ee62ee6375bd8c9b54eedb" + '&sport=basketball_nba&region=us&mkt=spreads')
     }
 }
 

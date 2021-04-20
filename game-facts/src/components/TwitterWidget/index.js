@@ -4,7 +4,7 @@ import { TwitterTimelineEmbed } from 'react-twitter-embed'
 function TwitterWidget() {
     return (
         <div className='col-3'>
-            <h3 className='text-center'>Live Updates</h3>
+            <h3 className='text-center h-10'>Live Updates</h3>
             <div>
                 <TwitterTimelineEmbed
                     sourceType="https://twitter.com/FantasyLabsNBA?ref_src=twsrc%5Etfw"
