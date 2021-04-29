@@ -29,6 +29,8 @@ function Scoreboard(props) {
         API.getDailySchedule()
             .then(res => {
 
+                setGamesTodayState(res.data.data.length);
+
                 setGameState1(`${res.data.data[0].teams[0]}(${res.data.data[0].sites[3].odds.spreads.points[0]}) vs ${res.data.data[0].teams[1]}(${res.data.data[0].sites[3].odds.spreads.points[1]})`)
                 setGameState2(`${res.data.data[1].teams[0]}(${res.data.data[1].sites[3].odds.spreads.points[0]}) vs ${res.data.data[1].teams[1]}(${res.data.data[1].sites[3].odds.spreads.points[1]})`)
                 setGameState3(`${res.data.data[2].teams[0]}(${res.data.data[2].sites[3].odds.spreads.points[0]}) vs ${res.data.data[2].teams[1]}(${res.data.data[2].sites[3].odds.spreads.points[1]})`)
@@ -46,6 +48,8 @@ function Scoreboard(props) {
     }, [gameState1])
 
 
+
+
     return (
         <div>
             <Header />
@@ -54,40 +58,18 @@ function Scoreboard(props) {
                     <TwitterWidget />
                     <div className='col-9'>
                         <GameCard
-                            matchup={gameState1}
-                        />
-                        <GameCard className='game2'
-                            matchup={gameState2}
-                        />
-                        <GameCard
-                            matchup={gameState3}
-                        />
-                        <GameCard
-                            matchup={gameState4}
-                        />
-                        <GameCard
-                            matchup={gameState5}
-                        />
-                        <GameCard
-                            matchup={gameState6}
-                        />
-                        <GameCard
-                            matchup={gameState7}
-                        />
-                        <GameCard
-                            matchup={gameState8}
-                        />
-                        <GameCard
-                            matchup={gameState9}
-                        />
-                        <GameCard
-                            matchup={gameState10}
-                        />
-                        <GameCard
-                            matchup={gameState11}
-                        />
-                        <GameCard
-                            matchup={gameState12}
+                            gameState1={gameState1}
+                            gameState2={gameState2}
+                            gameState3={gameState3}
+                            gameState4={gameState4}
+                            gameState5={gameState5}
+                            gameState6={gameState6}
+                            gameState7={gameState7}
+                            gameState8={gameState8}
+                            gameState9={gameState9}
+                            gameState10={gameState10}
+                            gameState11={gameState11}
+                            gameState12={gameState12}
                         />
                     </div>
                 </div>

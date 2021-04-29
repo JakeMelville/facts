@@ -4,7 +4,7 @@ import './style.css'
 function Header() {
     return(
         <div>
-            <div id='header' class="jumbotron text-center">Game Facts</div>
+            <div id='header' className="jumbotron text-center">Game Facts</div>
         </div>
     )
 }
