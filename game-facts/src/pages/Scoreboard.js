@@ -43,10 +43,53 @@ function Scoreboard(props) {
                 setGameState10(`${res.data.data[9].teams[0]}(${res.data.data[9].sites[3].odds.spreads.points[0]}) vs ${res.data.data[9].teams[1]}(${res.data.data[9].sites[3].odds.spreads.points[1]})`)
                 setGameState11(`${res.data.data[10].teams[0]}(${res.data.data[10].sites[3].odds.spreads.points[0]}) vs ${res.data.data[10].teams[1]}(${res.data.data[10].sites[3].odds.spreads.points[1]})`)
                 setGameState12(`${res.data.data[11].teams[0]}(${res.data.data[11].sites[3].odds.spreads.points[0]}) vs ${res.data.data[11].teams[1]}(${res.data.data[11].sites[3].odds.spreads.points[1]})`)
+
+
             })
             .catch((err) => console.log(err));
     }, [gameState1])
 
+    function gameCards() {
+        console.log('gamecards hits');
+        switch (gamesToday) {
+            case 1:
+                for (let i = 0; i < 1; i++) {
+                    document.getElementById(`game${i}`).style.display = 'block';
+                    console.log('case 1 hits');
+                }
+                break;
+
+            case 2:
+                for (let i = 0; i < 2; i++) {
+                    document.getElementById(`game${i}`).style.display = 'block';
+                }
+                break;
+            case 3:
+                for (let i = 0; i < 3; i++) {
+                    document.getElementById(`game${i}`).style.display = 'block';
+                }
+                break;
+            case 4:
+                for (let i = 0; i < 4; i++) {
+                    document.getElementById(`game${i}`).style.display = 'block';
+                }
+                break;
+            case 5:
+                for (let i = 0; i < 5; i++) {
+                    document.getElementById(`game${i}`).style.display = 'block';
+                }
+                break;
+            case 6:
+                for (let i = 0; i < 6; i++) {
+                    document.getElementById(`game${i}`).style.display = 'block';
+                    console.log('case 6 hits');
+                }
+                break;
+
+            default: console.log('no games');
+        }
+    }
+    gameCards()
 
 
 
@@ -58,18 +101,18 @@ function Scoreboard(props) {
                     <TwitterWidget />
                     <div className='col-9'>
                         <GameCard
-                            gameState1={gameState1}
-                            gameState2={gameState2}
-                            gameState3={gameState3}
-                            gameState4={gameState4}
-                            gameState5={gameState5}
-                            gameState6={gameState6}
-                            gameState7={gameState7}
-                            gameState8={gameState8}
-                            gameState9={gameState9}
-                            gameState10={gameState10}
-                            gameState11={gameState11}
-                            gameState12={gameState12}
+                            gameState0={gameState1}
+                            gameState1={gameState2}
+                            gameState2={gameState3}
+                            gameState3={gameState4}
+                            gameState4={gameState5}
+                            gameState5={gameState6}
+                            gameState6={gameState7}
+                            gameState7={gameState8}
+                            gameState8={gameState9}
+                            gameState9={gameState10}
+                            gameState10={gameState11}
+                            gameState11={gameState12}
                         />
                     </div>
                 </div>

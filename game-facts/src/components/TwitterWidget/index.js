@@ -1,14 +1,16 @@
 import React from 'react';
 import { TwitterTimelineEmbed } from 'react-twitter-embed'
+import './assets/style/style.css'
 
 function TwitterWidget() {
     return (
         <div className='col-3'>
-            <h3 className='text-center h-10'>Live Updates</h3>
-            <div>
+            <h3 className='text-center'>Live Updates</h3>
+            <div id="widget">
                 <TwitterTimelineEmbed
-                    sourceType="https://twitter.com/FantasyLabsNBA?ref_src=twsrc%5Etfw"
-                    screenName='FantasyLabsNBA'
+                    sourceType="profile"
+                    screenName="FantasyLabsNBA"
+                    options={{ height: 1000 }}
                 />
             </div>
         </div>
